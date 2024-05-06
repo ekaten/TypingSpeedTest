@@ -1,7 +1,6 @@
 import random
 from tkinter import *
 import ttkbootstrap as ttk
-from ttkbootstrap.constants import *
 
 
 #### GLOBAL VARIABLES ####
@@ -181,13 +180,13 @@ text.configure(state=DISABLED, bg="black", fg="white")
 instruction_bottom = ttk.Label(root, text=BOTTOM_TEXT, font=LABEL_FONT)
 instruction_bottom.pack(pady=10)
 
-go_to_test = ttk.Button(root, text="Start Test", bootstyle="success", width=20, command=launch_test_page)
+go_to_test = ttk.Button(root, text="Start Test", style="success.TButton", width=20, command=launch_test_page)
 go_to_test.pack(pady=20)
 
 timer_text = ttk.Label(root, text="01.00", font=("Birch Std", 60, "bold"), foreground="red")
 
 input_field = Text(root, height=12, width=50, font=("Courier New", 20, "bold"))
-see_result = ttk.Button(root, text="See Your Result", bootstyle="success", width=20, command=show_user_result)
+see_result = ttk.Button(root, text="See Your Result", style="success.TButton", width=20, command=show_user_result)
 
 scores_explained_bar = ttk.Frame(root, width=ROOT_WIDTH - 20, height=ROOT_HEIGHT / 3)
 scores_label = ttk.Label(scores_explained_bar, text="Typing Speed in Words Per Minute (WPM):", font=LABEL_FONT)
@@ -213,7 +212,7 @@ user_score = ttk.Label(root, text=f"", font=("Birch Std", 60, "bold"), foregroun
 number_characters_typed = ttk.Label(root, text="", font=("Birch Std", 20, "bold"), foreground="black")
 
 result_page_buttons_frame = ttk.Frame(root, width=ROOT_WIDTH - 20, height=40)
-try_again = ttk.Button(result_page_buttons_frame, text="Try Again", bootstyle="success", width=20, command=restart_program)
-quit_program = ttk.Button(result_page_buttons_frame, text="Quit", bootstyle="success", width=20, command=quit_program)
+try_again = ttk.Button(result_page_buttons_frame, text="Try Again", style="success.TButton", width=20, command=restart_program)
+quit_program = ttk.Button(result_page_buttons_frame, text="Quit", style="danger.TButton", width=20, command=quit_program)
 
 root.mainloop()
